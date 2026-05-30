@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
+	import favicon from '$lib/assets/favicon.svg';
 
 	const stars = $derived(page.data.stars as number | null | undefined);
 	const formatted = $derived(
@@ -11,7 +12,10 @@
 </script>
 
 <header class="flex items-center justify-between py-6">
-	<a href={resolve('/')} class="text-foreground text-base">llama.app</a>
+	<a href={resolve('/')} class="text-foreground text-base">
+		<img src={favicon} alt="" class="-mt-1 mr-0 inline h-6" />
+		<span>llama.app</span>
+	</a>
 	<a
 		href="https://github.com/ggml-org/llama.cpp"
 		target="_blank"
