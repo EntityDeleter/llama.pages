@@ -29,6 +29,13 @@ export const MODELS: Model[] = [
 		description: 'Coding & reasoning. Single-GPU sweet spot.'
 	},
 	{
+		id: 'Qwen/Qwen3.5-4B',
+		slug: 'Qwen3.5-4B',
+		name: 'Qwen3.5-4B',
+		params: '4B params',
+		description: 'Smaller model for quick chat and simple code.'
+	},
+	{
 		id: 'Qwen/Qwen3.6-35B-A3B',
 		slug: 'Qwen3.6-35B-A3B',
 		name: 'Qwen3.6-35B-A3B',
