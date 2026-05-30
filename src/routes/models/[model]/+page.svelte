@@ -82,7 +82,7 @@
 
 	<section class="pb-24">
 		<div
-			class="divide-foreground/10 border-foreground/10 bg-foreground/[0.02] w-full divide-y rounded-2xl border"
+			class="divide-foreground/10 border-foreground/10 bg-foreground/2 w-full divide-y rounded-2xl border"
 		>
 			{#each repos as repo (repo.id)}
 				<div
