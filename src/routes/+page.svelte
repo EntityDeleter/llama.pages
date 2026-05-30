@@ -132,6 +132,7 @@
 	</section>
 
 	<section class="grid grid-cols-1 items-center gap-12 pt-12 pb-12 md:grid-cols-2">
+		<img src="/local-ai.png" alt="AI running on your computer" class="h-auto w-full rounded-md" />
 		<div class="flex flex-col gap-6">
 			<h2 class="text-foreground text-2xl font-semibold tracking-tight">
 				AI that lives on your computer.<br />
@@ -142,7 +143,6 @@
 				back.
 			</p>
 		</div>
-		<img src="/local-ai.png" alt="AI running on your computer" class="h-auto w-full rounded-md" />
 	</section>
 
 	<section class="grid grid-cols-1 items-center gap-12 pt-12 pb-24 md:grid-cols-2">
@@ -187,15 +187,6 @@ pi</code
 	</section>
 
 	<section class="grid grid-cols-1 items-center gap-12 pt-12 pb-24 md:grid-cols-2">
-		<div class="flex flex-col gap-6">
-			<h2 class="text-foreground text-2xl font-semibold tracking-tight">
-				Optimized for any hardware.
-			</h2>
-			<p class="text-foreground text-base leading-relaxed">
-				From your laptop to a cluster, llama.cpp runs on whatever you have. Same binary, same
-				models, same hand-tuned kernels for every GPU and CPU.
-			</p>
-		</div>
 		<div class="hardware-slots relative grid h-68 grid-cols-2 gap-3 overflow-hidden sm:grid-cols-3">
 			{#each HARDWARE_REELS as reel, reelIndex (reelIndex)}
 				<div
@@ -222,6 +213,15 @@ pi</code
 					</div>
 				</div>
 			{/each}
+		</div>
+		<div class="flex flex-col gap-6">
+			<h2 class="text-foreground text-2xl font-semibold tracking-tight">
+				Optimized for any hardware.
+			</h2>
+			<p class="text-foreground text-base leading-relaxed">
+				From your laptop to a cluster, llama.cpp runs on whatever you have. Same binary, same
+				models, same hand-tuned kernels for every GPU and CPU.
+			</p>
 		</div>
 	</section>
 
