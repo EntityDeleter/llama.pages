@@ -64,7 +64,7 @@
 	}
 </script>
 
-<main class="mx-auto w-full max-w-5xl px-6 md:px-10">
+<main class="mx-auto w-full max-w-5xl px-6 md:px-16">
 	<SiteHeader />
 
 	<section class="flex flex-col items-center pt-16 pb-12">
