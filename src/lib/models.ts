@@ -60,7 +60,7 @@ export const MODELS: Model[] = [
 		id: 'openai/gpt-oss-20b',
 		slug: 'gpt-oss-20b',
 		name: 'gpt-oss-20b',
-		params: '20B params',
+		params: '20B MoE',
 		description: "OpenAI's open weights. Frontier reasoning, local."
 	},
 	{
