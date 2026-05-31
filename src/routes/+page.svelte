@@ -5,6 +5,10 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import SiteHeader from '$lib/components/SiteHeader.svelte';
 	import { MODELS, ORG_AVATARS, repoAuthor } from '$lib/models';
+	import { FAQS } from '$lib/faqs';
+	import { ChevronDown } from 'lucide-svelte';
+
+	let expandedFAQs = $state<Record<string, boolean>>({});
 
 	const HW = 'https://huggingface.co/front/assets/hardware';
 	const HARDWARE_REELS = [
@@ -261,6 +265,35 @@ pi</code
 				Discover more models on Hugging Face
 				<ArrowUpRight class="size-3.5" />
 			</a>
+		</div>
+	</section>
+
+	<section class="pb-24">
+		<h2 class="text-foreground mb-8 text-2xl font-semibold tracking-tight">FAQs</h2>
+
+		<div class="flex flex-col gap-2">
+			{#each FAQS as faq (faq.question)}
+				<div class="group bg-foreground/4 hover:bg-foreground/[0.07] rounded-xl transition-colors">
+					<button
+						class="flex w-full items-center gap-2 px-5 py-4 text-left"
+						onclick={() => {
+							expandedFAQs[faq.question] = !expandedFAQs[faq.question];
+						}}
+					>
+						<ChevronDown
+							class="size-4 shrink-0 transition-transform {expandedFAQs[faq.question]
+								? 'rotate-180'
+								: ''}"
+						/>
+						<h3 class="text-foreground text-base font-semibold">{faq.question}</h3>
+					</button>
+					{#if expandedFAQs[faq.question]}
+						<p class="text-foreground/70 px-5 pt-0 pb-4 pl-11 text-sm">
+							{faq.answer}
+						</p>
+					{/if}
+				</div>
+			{/each}
 		</div>
 	</section>
 </main>
