@@ -16,6 +16,12 @@ jobs:
   test:
     name: Run tests
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # Run in the official Playwright image so browsers come preinstalled: `playwright install`
+    # hangs at 100% downloading from the CDN on the hosted runner. Tag must match the
+    # @playwright/test version in package-lock.json.
+    container:
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
 
     steps:
       - name: Checkout
@@ -30,9 +36,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
 
       - name: Run tests
         run: npm test
