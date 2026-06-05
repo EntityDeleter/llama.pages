@@ -137,7 +137,7 @@
 	<section class="grid grid-cols-1 items-center gap-12 pt-12 pb-12 md:grid-cols-2">
 		<img src="/local-ai.png" alt="AI running on your computer" class="h-auto w-full rounded-md" />
 		<div class="flex flex-col gap-6">
-			<h2 class="text-foreground text-2xl font-semibold tracking-tight">
+			<h2 class="text-foreground text-2xl font-semibold">
 				AI that lives on your computer.<br />
 				Open-source, private, always local.
 			</h2>
@@ -187,7 +187,7 @@ pi</code
 			</div>
 		</div>
 		<div class="flex flex-col gap-6">
-			<h2 class="text-foreground text-2xl font-semibold tracking-tight">
+			<h2 class="text-foreground text-2xl font-semibold">
 				Pair it with a local coding agent.
 			</h2>
 			<p class="text-foreground/70 text-base leading-relaxed">
@@ -205,7 +205,7 @@ pi</code
 
 	<section class="grid grid-cols-1 items-center gap-12 pt-12 pb-24 md:grid-cols-2">
 		<div class="flex flex-col gap-6">
-			<h2 class="text-foreground text-2xl font-semibold tracking-tight">
+			<h2 class="text-foreground text-2xl font-semibold">
 				Optimized for any hardware.
 			</h2>
 			<p class="text-foreground/70 text-base leading-relaxed">
@@ -254,7 +254,7 @@ pi</code
 	</section>
 
 	<section class="pb-24">
-		<h2 class="text-foreground mb-8 text-2xl font-semibold tracking-tight">Run your first model</h2>
+		<h2 class="text-foreground mb-8 text-2xl font-semibold">Run your first model</h2>
 
 		<div class="flex flex-col gap-2">
 			{#each MODELS as model (model.slug)}
